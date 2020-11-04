@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sending Text</title>
+
+    <style type="text/css">
+    html{ 
+      min-height: 100%;
+      background-image: url(sky.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+	  /* body {
+          background-image:url("sky.jpg")
+    
+    }	   */
+      fieldset {
+         width: 75%;
+         border: 2px solid #cccccc;
+      }
+
+      label {
+         float: left;
+         text-align: left;
+         font-weight: bold;
+      }
+	
+      input {
+         border: 1px solid #000;
+         padding: 3px;
+      }
+
+    </style>
+</head>
+
+<body>
+  <h1>Send a Text</h1>
+  <form action="http://www.isom.biz/text/sms6.php" method="post">
+  <fieldset>
+    <label for="TextNumber">Text Number: </label>
+    <input required type="tel" id="TextNumber" name="TextNumber" 
+	maxlength="12" placeholder="6171234567" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
+	<br><br>
+  <small>Format: 6171234567</small>
+  <br>
+  <br>  <label>Text Message: </label><br>
+  <textarea required id="mymessage" placeholder="How would I help you?" name="mymessage" rows = "3" cols ="75" maxlength="300"></textarea>
+  </fieldset>
+  
+  <p><input type="submit" value="Send Text" /></p>
+  
+  </form>
+</body>
+</html>
