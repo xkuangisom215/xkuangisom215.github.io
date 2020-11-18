@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/icon.png" type="image/gif" sizes="16x16">
+    <!-- Include SMTPJS 3rd Party Code -->
+    <title>Give Us Your Feedback</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- META TAGE -->
+    <meta charset="utf-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="ISOM215 Feedback">
+    <meta name="keywords" content="Feedback Rating">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+        html {
+            min-height: 100%;
+            background-image: url(img/bgimg/food3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: slategrey;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        
+        label {
+            margin-left: 10px;
+            font-size: 22px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        ValidateEmail()
+            //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        function ValidateEmail() {
+            var email_to_send_to = document.getElementById("email_address").value;
+            //console.log("in ValidateEmail...");
+
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email_to_send_to)) {
+                return (true)
+            }
+            alert("Invalid email address entered.")
+            return (false)
+        }
+        //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        sendEmail()
+            //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        function sendEmail() {
+
+            var email_to_send_to = document.getElementById("email_address").value;
+
+            // Check email address entered and make sure valid	
+            if (ValidateEmail()) {
+                //console.log("in sendEmail...");
+
+                Email.send({
+                        SecureToken: "98bca931-c2ae-45da-8b0b-a1c0569a8591",
+                        To: "xkuang@su.suffolk.edu",
+                        From: "DoNotReply@gmail.com",
+                        Cc: email_to_send_to,
+                        Subject: "Feedback Received",
+                        Body: "<h2 style=color:#228B22>We got your feedback!</h2><hr>" +
+                            "Name: " +
+                            document.getElementById("submitter_name").value +
+                            "<br>Contact Notes: " + document.getElementById("mytextarea").value + "<br>" +
+                            "<hr>"
+                    })
+                    .then(function(message) {
+                        alert("Email successfully sent.")
+                    });
+            }
+        }
+    </script>
+
+</head>
+
+<body style="">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a class="active" href="contactus.html">Contact us</a></li>
+        <li style="float:right"><a href="#about">About us</a></li>
+    </ul>
+    <h2>What do you want to tell us?</h2>
+    <form method="post">
+        <label>Name:</label><br>
+        <input id="submitter_name" type="text" size="45"><br>
+        <br> <label>Email Address: </label><br>
+        <input id="email_address" type="email" required size="45"><br>
+        <br> <label>How can we do better: </label><br>
+        <textarea id="mytextarea" name="notes" rows="3" cols="100" maxlength="300">
+  Tell us what is your thinking?
+  </textarea>
+        <br>
+        <p><input style="margin-left: 114px" type="button" src="email3.png" value="Send Email" onclick="sendEmail('foo')" /></p>
+        <br />
+    </form>
+
+    <div style="text-align: center"><a href="Foodpage.html" target="_blank">Go back to My Homepage</a></div>
+</body>
+
+</html>
