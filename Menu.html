@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png" type="image/gif" sizes="16x16">
+    <title>Menu</title>
+    <style type="text/css">
+        html {
+            min-height: 100%;
+            background-image: url(img/bgimg/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: slategrey;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        
+        .box {
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: auto;
+            text-align: center;
+            border-image: 1px;
+            border: 0px solid white;
+        }
+        
+        .content {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            border: black;
+        }
+        
+        .title {
+            font-weight: bold;
+            font-size: 30px;
+            color: wheat
+        }
+        
+        .word {
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        
+        img {
+            width: 700px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="Menu.html">Menu</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li style="float:right"><a href="#about">About us</a></li>
+    </ul>
+    <div class="content">
+        <div class="box">
+            <div class="title">Cream Brulee</div>
+            <div><img src="img/cake/bulei.jpg" alt="Cream Brulee"></div>
+            <div class="word">Dessert</div>
+            <div class="word">Cal: 210 per serving</div>
+            <div class="word">Make with 2 eggyorks, 100 ml Cream, and 30g sugar.</div>
+            <div class="word">Break in Oven for 20 mins. put some sugar on the top and use cooking gun to make the sugar change color.</div>
+        </div>
+        <div class="box">
+            <div class="title">Mango Bread</div>
+            <div><img src="img/cake/mangobread.jpg" alt="Mango Bread"></div>
+            <div class="word">Dessert</div>
+            <div class="word">Cal: 500 per serving</div>
+            <div class="word">Make with a Thick Toast, a freah Mango, Butter, and Condensed milk.</div>
+            <div class="word">Bread the toast with butter in the oven for 3 mins first, then put diced mango and condensed milk on the top.</div>
+        </div>
+        <div class="box">
+            <div class="title">Egg with Rice</div>
+            <div><img src="img/beef/eggrice1.jpg" alt="Egg rice"></div>
+            <div class="word">Meal</div>
+            <div class="word">Cal: 750 per serving</div>
+            <div class="word">Make with Curry, Beef, Egg and white rice</div>
+            <div class="word">Cook the white rice and put in the button, cook the scrambled egg on the top, and cook the beef with curry put the on the top.</div>
+        </div>
+        <div class="box">
+            <div class="title">Beef Rice</div>
+            <div><img src="img/beef/beefrice.jpg" alt="Beef Rice"></div>
+            <div class="word">Meal</div>
+            <div class="word">Cal: 850 per serving</div>
+            <div class="word">Make with Beef sildes, row eggyork, and Korean soy sauce</div>
+            <div class="word">Put the white rice in the button, cook the beef sildes with a griled pan and put Korean soy sauce as a favor, finally put a row eggyork on the top.</div>
+        </div>
+        <div class="box">
+            <div class="title">Wellington Beef</div>
+            <div><img src="img/beef/wellingtonbeef1.jpg" alt="Wellington Beef"></div>
+            <div class="word">Entrees</div>
+            <div class="word">Cal: 900 per serving</div>
+            <div class="word">Make with Sharon Beef, Pastry, ham, mushroom, and nuts</div>
+            <div class="word">Cook the Sharon with rare, use the ham to wrap it with cooked diced mushroom and nuts, wrap it again with pastry. Brush the egg on the pastry. Put in the oven with 450 degree Fahrenheit.</div>
+        </div>
+        <div class="box">
+            <div class="title">Steam Shrimp</div>
+            <div><img src="img/seafood/shrimp.jpg" alt="Shrimp"></div>
+            <div class="word">Entrees</div>
+            <div class="word">Cal: 900 per serving</div>
+            <div class="word">Make with shrimp, glass noodle, and diced garlic</div>
+            <div class="word">Put the glass noodle on the button, wash and prepare the shrimp on the noodle, and put the diced garlic on the shrimp. Steam it with 20 mins. Finally, put the hot oil on the top. </div>
+        </div>
+</body>
+
+</html>
